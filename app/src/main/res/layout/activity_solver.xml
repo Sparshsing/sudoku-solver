@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.sparsh.sudokusolver.Solver">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:text="Enter Known Numbers"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="200dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+
+        android:visibility="gone" />
+
+    <GridLayout
+
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+
+        android:baselineAligned="false"
+        android:columnCount="9"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        >
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox1"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox2"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox3"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox4"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox5"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox6"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox7"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox8"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="0dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginVertical="1dp"
+            android:background="@color/colorBox9"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="cellClicked"
+            android:padding="0dp"
+            android:textSize="26sp" />
+
+
+    </GridLayout>
+
+
+    <Button
+        android:id="@+id/btnSolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:onClick="SolveNow"
+        android:text="Solve Now"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="resetBtnClicked"
+        android:text="Reset"
+        android:textSize="24sp" />
+
+</LinearLayout>
